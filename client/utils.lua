@@ -105,7 +105,8 @@ end
 
 function OpenShopMenu()
     if Config.ShopScript == 'qb' then
-        TriggerServerEvent('inventory:server:OpenInventory', 'shop', 'pc_parts', Config.ShopItems)
+        TriggerServerEvent('sayer-pcrepairs:TriggerServerShop', Config.ShopItems)
+        -- TriggerServerEvent('inventory:server:OpenInventory', 'shop', 'pc_parts', Config.ShopItems)
     elseif Config.ShopScript == 'jim' then
         TriggerServerEvent(' jim-shops:ShopOpen', 'shop', 'pc_parts', Config.ShopItems)
     elseif Config.ShopScript == 'other' then

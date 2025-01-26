@@ -166,8 +166,7 @@ Config.BrokenPartsTrading = { -- used for trading broken parts for materials
 }
 
 Config.ShopItems = { --used for buying parts
-label = 'PC Repairs LTD',
-    slots = 13,
+    label = 'PC Repairs LTD',
     items = {
         [1] = {name = 'new_monitor',        price = 50,amount = 100,info = {},type = 'item',slot = 1,},
         [2] = {name = 'new_keyboard',       price = 50,amount = 100,info = {},type = 'item',slot = 2,},

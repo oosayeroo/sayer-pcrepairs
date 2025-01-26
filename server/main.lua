@@ -52,6 +52,18 @@ RegisterNetEvent('sayer-pcrepairs:TradingPackage', function(item)
     end
 end)
 
+RegisterNetEvent('sayer-pcrepairs:TriggerServerShop',function(shopData)
+    local src = source
+    exports['qb-inventory']:CreateShop({
+        name = 'sayer_pcrepairs_'..shopData.label,
+        label = shopData.label,
+        slots = #shopData.items,
+        items = shopData.items
+    })
+    Wait(10)
+    exports['qb-inventory']:OpenShop(src, 'sayer_pcrepairs_'..shopData.label)
+end)
+
 function DebugCode(msg)
     if Config.Debug then
         print(msg)
